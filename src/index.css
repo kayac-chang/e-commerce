@@ -6,6 +6,9 @@
 
 html {
   font-family: "DM Sans", sans-serif;
+}
+
+.bg-auth {
   background-image: url("@/assets/bg.jpeg");
   @apply bg-no-repeat;
 }
