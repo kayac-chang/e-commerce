@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
-import reactSvgPlugin from "vite-plugin-react-svg";
+import svgr from "@svgr/rollup";
 import path from "path";
 
 export default defineConfig({
-  plugins: [reactRefresh(), reactSvgPlugin({ defaultExport: "component" })],
+  plugins: [reactRefresh(), svgr({})],
   esbuild: {
     jsxInject: `import React from 'react'`,
   },
