@@ -1,8 +1,24 @@
 import { Icon } from "@/components";
+import clsx from "clsx";
+import { ReactNode } from "react";
 
-export function Nav() {
+type BaseProps = {
+  className: string;
+  children: ReactNode;
+};
+function Base({ children, className }: Partial<BaseProps>) {
   return (
-    <nav className="flex justify-between items-center px-8 py-2">
+    <nav
+      className={clsx("flex justify-between items-center px-8 py-4", className)}
+    >
+      {children}
+    </nav>
+  );
+}
+
+function Home() {
+  return (
+    <Base>
       <button>
         <Icon.MenuVariant className="w-5" />
       </button>
@@ -18,6 +34,26 @@ export function Nav() {
         src="https://i.pravatar.cc/300"
         alt="avatar"
       />
-    </nav>
+    </Base>
   );
 }
+
+function Search() {
+  return (
+    <Base>
+      <button>
+        <Icon.ChevronLeft className="w-5" />
+      </button>
+
+      <span className="inline-flex">
+        <strong>Search</strong>
+      </span>
+
+      <button>
+        <Icon.ShoppingCart className="w-5" />
+      </button>
+    </Base>
+  );
+}
+
+export const Nav = { Home, Search };

@@ -6,3 +6,4 @@ export * from "./Badge";
 export * from "./Card";
 export * from "./Product";
 export * from "./Nav";
+export * from "./Section";

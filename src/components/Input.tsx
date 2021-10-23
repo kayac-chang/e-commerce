@@ -13,8 +13,9 @@ function Base({ type = "text", icon, placeholder, className }: Partial<Props>) {
     <label
       className={clsx(
         "flex items-center gap-2",
-        "p-3 bg-white rounded-lg",
+        "bg-white rounded-lg",
         "focus-within:ring ring-primary",
+        "px-3 py-2",
         className
       )}
     >
@@ -23,7 +24,7 @@ function Base({ type = "text", icon, placeholder, className }: Partial<Props>) {
 
       <input
         type={type}
-        className="w-full outline-none text-black"
+        className="w-full outline-none text-black placeholder-gray-dark"
         placeholder={placeholder}
       />
     </label>

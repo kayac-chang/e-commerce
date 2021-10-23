@@ -42,7 +42,42 @@ function Feature({ className, title }: Props) {
   );
 }
 
+function Popular({ title }: Props) {
+  return (
+    <div className="flex gap-4">
+      <Card className="flex-1">
+        <div className="bg-gray-lighter flex justify-center items-center p-3">
+          <img src={IMG} alt="product picture" />
+        </div>
+      </Card>
+
+      <div className="flex-[3] flex flex-col justify-between">
+        <header>
+          <h3>{title}</h3>
+
+          <strong className="text-xs">USD 350</strong>
+        </header>
+
+        <footer className="flex gap-4 items-center text-xs">
+          <span className="inline-flex items-center gap-1">
+            <Icon.Star className="w-4 text-accent" />
+
+            <span>4.6</span>
+          </span>
+
+          <span>86 Reviews</span>
+
+          <button className="ml-auto">
+            <Icon.MoreVertical className="w-5" />
+          </button>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
 export const Product = {
   Topic,
   Feature,
+  Popular,
 };

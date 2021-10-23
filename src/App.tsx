@@ -1,7 +1,7 @@
-import { SignIn, SignUp, Home } from "./pages";
+import { Search } from "./pages";
 
 function App() {
-  return <Home />;
+  return <Search />;
 }
 
 export default App;

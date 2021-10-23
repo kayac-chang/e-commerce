@@ -1,4 +1,4 @@
-import { Nav, Input, Badge, Product } from "@/components";
+import { Nav, Input, Badge, Product, Section } from "@/components";
 
 export function Home() {
   const categories = ["Microphones", "Loudspeakers", "Earphones", "Headphones"];
@@ -17,7 +17,7 @@ export function Home() {
 
   return (
     <main className="h-screen overflow-hidden flex flex-col">
-      <Nav />
+      <Nav.Home />
 
       <form className="flex-1 flex flex-col">
         <header className="px-8 pt-4 pb-6">
@@ -49,15 +49,14 @@ export function Home() {
             ))}
           </ul>
 
-          <div className="flex flex-col">
-            <header className="flex justify-between py-4">
-              <h2>Featured Products</h2>
-
+          <Section
+            title="Featured Products"
+            option={
               <a href="#" className="text-sm text-gray-darker">
                 See All
               </a>
-            </header>
-
+            }
+          >
             <ul className="flex flex-nowrap gap-4">
               {features.map((props) => (
                 <li key={props.title} className="w-1/2">
@@ -65,7 +64,7 @@ export function Home() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Section>
         </div>
       </form>
     </main>
