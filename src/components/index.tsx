@@ -7,3 +7,5 @@ export * from "./Card";
 export * from "./Product";
 export * from "./Nav";
 export * from "./Section";
+export * from "./Panel";
+export * from "./Rate";

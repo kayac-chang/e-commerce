@@ -38,16 +38,17 @@ function Home() {
   );
 }
 
-function Search() {
+type CartProps = {
+  title?: string;
+};
+function Cart({ title }: CartProps) {
   return (
     <Base>
       <button>
         <Icon.ChevronLeft className="w-5" />
       </button>
 
-      <span className="inline-flex">
-        <strong>Search</strong>
-      </span>
+      {title && <strong>{title}</strong>}
 
       <button>
         <Icon.ShoppingCart className="w-5" />
@@ -56,4 +57,4 @@ function Search() {
   );
 }
 
-export const Nav = { Home, Search };
+export const Nav = { Home, Cart };

@@ -1,7 +1,7 @@
-import { Search } from "./pages";
+import { Explore } from "./pages";
 
 function App() {
-  return <Search />;
+  return <Explore />;
 }
 
 export default App;

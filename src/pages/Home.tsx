@@ -1,4 +1,4 @@
-import { Nav, Input, Badge, Product, Section } from "@/components";
+import { Nav, Input, Badge, Product, Section, Panel } from "@/components";
 
 export function Home() {
   const categories = ["Microphones", "Loudspeakers", "Earphones", "Headphones"];
@@ -30,7 +30,7 @@ export function Home() {
           <Input.Search className="border border-gray-dark py-2" />
         </header>
 
-        <div className="rounded-t-3xl bg-gray-light flex-1 px-8 pt-6 flex flex-col gap-2">
+        <Panel>
           <ul className="flex py-2 gap-6 overflow-auto">
             {categories.map((category) => (
               <li key={category}>
@@ -65,7 +65,7 @@ export function Home() {
               ))}
             </ul>
           </Section>
-        </div>
+        </Panel>
       </form>
     </main>
   );

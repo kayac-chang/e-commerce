@@ -1,4 +1,4 @@
-import { Card, Icon } from "@/components";
+import { Card, Icon, Rate } from "@/components";
 import clsx from "clsx";
 import IMG from "@/assets/product.png";
 
@@ -59,11 +59,7 @@ function Popular({ title }: Props) {
         </header>
 
         <footer className="flex gap-4 items-center text-xs">
-          <span className="inline-flex items-center gap-1">
-            <Icon.Star className="w-4 text-accent" />
-
-            <span>4.6</span>
-          </span>
+          <Rate>4.6</Rate>
 
           <span>86 Reviews</span>
 
@@ -76,8 +72,37 @@ function Popular({ title }: Props) {
   );
 }
 
+function Grid({ title }: Props) {
+  return (
+    <Card className="flex flex-col gap-4 p-2">
+      <div className="p-4">
+        <img src={IMG} alt="product picture" />
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <header>
+          <h3 className="text-sm">{title}</h3>
+
+          <strong className="text-xs">USD 350</strong>
+        </header>
+
+        <footer className="flex gap-4 items-center text-[10px]">
+          <Rate>4.6</Rate>
+
+          <span>86 Reviews</span>
+
+          <button className="ml-auto">
+            <Icon.MoreVertical className="w-5" />
+          </button>
+        </footer>
+      </div>
+    </Card>
+  );
+}
+
 export const Product = {
   Topic,
   Feature,
   Popular,
+  Grid,
 };

@@ -34,7 +34,7 @@ export function Search() {
 
   return (
     <main className="h-screen overflow-hidden flex flex-col gap-4">
-      <Nav.Search />
+      <Nav.Cart title="Search" />
 
       <form className="px-8 flex flex-col gap-8">
         <Input.Search className="border border-gray-dark" />
