@@ -8,6 +8,12 @@ html {
   font-family: "DM Sans", sans-serif;
 }
 
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .bg-auth {
   background-image: url("@/assets/bg.jpeg");
   @apply bg-no-repeat;
