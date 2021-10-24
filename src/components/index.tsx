@@ -9,3 +9,7 @@ export * from "./Nav";
 export * from "./Section";
 export * from "./Panel";
 export * from "./Rate";
+export * from "./Review";
+export * from "./Avatar";
+export * from "./Tabs";
+export * from "./List";

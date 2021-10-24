@@ -6,13 +6,13 @@ type Props = {
   children: ReactNode;
 };
 export function Card({ className, children }: Partial<Props>) {
-  className = clsx(className, "bg-white rounded-xl");
+  const card = "bg-white rounded-xl";
 
   if (isValidElement(children)) {
     return cloneElement(children, {
-      className: clsx(className, children.props.className),
+      className: clsx(card, className, children.props.className),
     });
   }
 
-  return <div className={className}>{children}</div>;
+  return <div className={clsx(card, className)}>{children}</div>;
 }

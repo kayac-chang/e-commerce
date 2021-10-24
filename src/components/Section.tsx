@@ -1,15 +1,22 @@
+import clsx from "clsx";
 import { ReactNode } from "react";
 
 type Props = {
   title: string;
   option: ReactNode;
   children: ReactNode;
+  className: string;
 };
-export function Section({ title, option, children }: Partial<Props>) {
+export function Section({
+  title,
+  option,
+  children,
+  className,
+}: Partial<Props>) {
   return (
-    <section className="flex flex-col">
+    <section className={clsx("flex flex-col", className)}>
       <header className="flex justify-between pb-4">
-        <h2 className="mb-4">{title}</h2>
+        <h2>{title}</h2>
 
         {option}
       </header>

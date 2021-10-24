@@ -72,9 +72,9 @@ function Popular({ title }: Props) {
   );
 }
 
-function Grid({ title }: Props) {
+function Grid({ className, title }: Props) {
   return (
-    <Card className="flex flex-col gap-4 p-2">
+    <Card className={clsx("flex flex-col gap-4 p-2", className)}>
       <div className="p-4">
         <img src={IMG} alt="product picture" />
       </div>
@@ -100,9 +100,20 @@ function Grid({ title }: Props) {
   );
 }
 
+function Picture({ title, className }: Props) {
+  return (
+    <Card>
+      <div className={clsx("flex items-center bg-gray-light", className)}>
+        <img src={IMG} alt={`${title}'s picture`} />
+      </div>
+    </Card>
+  );
+}
+
 export const Product = {
   Topic,
   Feature,
   Popular,
   Grid,
+  Picture,
 };

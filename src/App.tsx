@@ -1,7 +1,7 @@
-import { Explore } from "./pages";
+import { Product } from "@/pages";
 
 function App() {
-  return <Explore />;
+  return <Product />;
 }
 
 export default App;

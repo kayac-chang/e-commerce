@@ -1,4 +1,4 @@
-import { Icon } from "@/components";
+import { Avatar, Icon } from "@/components";
 import clsx from "clsx";
 import { ReactNode } from "react";
 
@@ -29,11 +29,7 @@ function Home() {
         <strong>Audio</strong>
       </span>
 
-      <img
-        className="w-9 rounded-full"
-        src="https://i.pravatar.cc/300"
-        alt="avatar"
-      />
+      <Avatar />
     </Base>
   );
 }
